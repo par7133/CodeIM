@@ -85,16 +85,16 @@ function setFooterPos() {
 
 window.addEventListener("load", function() {
 
-  //$("div.appMenu").load("https://appmenu.5mode.com/?v="+ rnd(50000, 99999));
+  $("div.appMenu").load("https://appmenu.5mode.com/?v="+ rnd(50000, 99999));
 
   setTimeout("setFooterPos()", 1000);
 }, true);
 
 window.addEventListener("resize", function() {
-
-  hideMenu();
-
+  
   setTimeout("setFooterPos()", 1000);
+  
+  hideMenu();
 }, true);
 
 
