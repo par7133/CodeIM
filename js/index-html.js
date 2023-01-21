@@ -83,11 +83,27 @@ function setFooterPos() {
   }
 }
 
+function setOriginsPos() {
+  h=parseInt(window.innerHeight);
+  w=parseInt(window.innerWidth);
+  mytop = parseInt(window.innerHeight - ($("#originsDisplay").height() + 60));
+  $("#originsDisplay").css("top", mytop+"px");
+  setTimeout("hideOrigins()",15000);
+}
+
+function hideOrigins() {
+  $("#originsDisplay").css("visibility","hidden");
+}  
+
 window.addEventListener("load", function() {
 
   $("div.appMenu").load("https://appmenu.5mode.com/?v="+ rnd(50000, 99999));
 
   setTimeout("setFooterPos()", 1000);
+  
+  setTimeout("setOriginsPos()", 500);
+  $("#originsDisplay").show();
+  
 }, true);
 
 window.addEventListener("resize", function() {
