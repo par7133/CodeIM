@@ -1,2 +1,2 @@
-# coder.email
+# CodeIM
 Every coder, an email
